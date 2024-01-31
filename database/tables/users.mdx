@@ -1,0 +1,33 @@
+---
+title: 'Users'
+description: 'Responsável por armazenar os dados cadastrais dos usuários.'
+icon: 'users'
+---
+
+### Estrutura
+
+| Coluna             | Tipo       | Obrigatório? | Descrição                                                              |
+| ------------------ | ---------- | ------------ | ---------------------------------------------------------------------- |
+| name               | Text       | True         | Nome completo do usuário                                               |
+| username           | Text       | True         | Nome de usuário                                                        |
+| email              | Text       | True         | Endereço de e-mail do usuário                                          |
+| avatar             | Text       | True         | ID do arquivo do avatar do usuário                                     |
+| has_job            | Boolean    | False        | Usuário possui um trabalho ou não                                      |
+| works_with         | Text       | False        | Profissão do usuário                                                   |
+| work_level         | Text       | False        | Senioridade do usuário na profissão                                    |
+| favorite_lang      | Text       | False        | Linguagem de programação favorita do usuário                           |
+| notifications_open | Boolean    | False        | Receber e-mails informativos sobre conta, dentre outros, em seu e-mail |
+| email_open         | Boolean    | False        | Receber e-mails promocionais, dentre outros, em seu e-mail             |
+| created_at         | Timestampz | True         | Data e hora de quando foi criado                                       |
+| updated_at         | Timestampz | True         | Data e hora de quando foi atualizado pela última vez                   |
+
+### Políticas do Supabase
+
+Essa é uma tabela que todos podem acessar seus dados mas somente usuários autenticados podem inserir novos dados e
+atualizá-los.
+
+| Tipo   | Nome                                       | Template do Supabase? | Cargos alvos  |
+| ------ | ------------------------------------------ | --------------------- | ------------- |
+| Select | Enable read access for all users           | True                  | public        |
+| Insert | Enable insert for authenticated users only | True                  | authenticated |
+| Update | Enable update for authenticated users only | True                  | authenticated |

@@ -1,0 +1,82 @@
+---
+title: 'Desenvolvimento'
+description: 'Aprenda a configurar seu ambiente local de desenvolvimento'
+---
+
+<Info>
+  **Pré-requisito** Você deve ter o Node.js instalado (versão 18.15.0 ou superior).
+</Info>
+
+## Documentação
+
+Step 1. Instale Mintlify no seu PC:
+
+<CodeGroup>
+
+```bash npm
+npm i -g mintlify
+```
+
+```bash yarn
+yarn global add mintlify
+```
+
+</CodeGroup>
+
+Step 2. Vá para a pasta de documentação (onde está `mint.json`) e rode o seguinte comando:
+
+```bash
+mintlify dev
+```
+
+O website local de documentação ao executar o comando, roda por padrão no endereço `http://localhost:3000`.
+
+### Portas customizadas
+
+Mintlify usa a porta 3000 por padrão. Você pode usar a flag `--port` para customizar a porta que o Mintlify irá
+executar. Por exemplo,, use esse comando para rodar na porta 3333:
+
+```bash
+mintlify dev --port 3333
+```
+
+Você verá um erro como esse caso a porta que você escolheu estiver em uso:
+
+```md
+Error: listen EADDRINUSE: address already in use :::3000
+```
+
+## Versões do CLI do Mintlify
+
+Cada CLI está vinculado a uma versão específica do Mintlify. Por favor, atualize o CLI se o seu website local
+parecer diferente da produção.
+
+<CodeGroup>
+
+```bash npm
+npm i -g mintlify@latest
+```
+
+```bash yarn
+yarn global upgrade mintlify
+```
+
+</CodeGroup>
+
+## Resolução de problemas
+
+Aqui está a solução de alguns problemas comuns quando rodando com o CLI.
+
+<AccordionGroup>
+  <Accordion title="Mintlify não está carregando">
+    Atualize o Node para a versão 18. Rode `mintlify install` e tente novamente.
+  </Accordion>
+  <Accordion title="Nenhum arquivo ou diretório no Windows">
+    Vá para o diretório `C:/Users/Username/.mintlify/` e remova a pasta `mint`.
+    Após isso, abra o Git Bash aqui e execute `git clone https://github.com/mintlify/mint.git`.
+  </Accordion>
+  <Accordion title="Erro desconhecido">
+    Tente navegar para a raíz do seu dispositivo e delete a pasta `.mintlify`.
+    Logo após, rode `mintlify dev` novamente.
+  </Accordion>
+</AccordionGroup>
