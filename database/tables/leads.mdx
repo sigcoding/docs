@@ -1,0 +1,25 @@
+---
+title: 'Leads'
+description: 'Responsável por armazenar todos os usuários que se registraram na landing page para receber novidades
+do Biome.'
+icon: 'star'
+---
+
+### Estrutura
+
+| Coluna     | Tipo       | Obrigatório? | Descrição                                    |
+| ---------- | ---------- | ------------ | -------------------------------------------- |
+| name       | Text       | True         | Nome do usuário                              |
+| email      | Text       | True         | E-mail do usuário                            |
+| came_from  | Text       | True         | De onde o usuário veio, geralmente "landing" |
+| created_at | Timestampz | True         | Data e hora de quando foi criado             |
+
+### Políticas do Supabase
+
+Essa é uma tabela simples que todos podem acessar seus dados mas somente usuários autenticados com cargo `anon`
+podem inserir novos dados.
+
+| Tipo   | Nome                                       | Template do Supabase? | Cargos alvos |
+| ------ | ------------------------------------------ | --------------------- | ------------ |
+| Select | Enable read access for all users           | True                  | public       |
+| Insert | Enable insert for authenticated users only | True                  | anon         |

@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "BIOME",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -17,13 +17,13 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Suporte",
+      "url": "mailto:admin@sigcoding.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Biome",
+    "url": "https://biome-six.vercel.app/"
   },
   "tabs": [
     {
@@ -33,29 +33,39 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Biome",
+      "icon": "house",
+      "url": "https://biome-six.vercel.app/"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Comunidade Sig",
+      "icon": "discord",
+      "url": "https://discord.gg/5Y4M4Etskx"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Sig",
+      "icon": "leaf",
+      "url": "https://sigcoding.com"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "group": "Principal",
+      "pages": ["main/introduction", "main/development"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Database",
+      "pages": [
+        {
+          "group": "Tabelas",
+          "icon": "table",
+          "pages": [
+            "database/tables/categories",
+            "database/tables/leads",
+            "database/tables/users"
+          ]
+        }
+      ]
     },
     {
       "group": "API Documentation",
@@ -71,8 +81,8 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/sigcoding",
+    "github": "https://github.com/sigcoding",
+    "linkedin": "https://www.linkedin.com/company/sigcoding"
   }
 }

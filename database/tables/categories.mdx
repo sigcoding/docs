@@ -1,0 +1,22 @@
+---
+title: 'Categories'
+description: 'Responsável por armazenar todas as categorias disponíveis e criadas para serem utilizadas em projetos.'
+icon: 'list'
+---
+
+### Estrutura
+
+| Coluna     | Tipo       | Obrigatório? | Descrição                        |
+| ---------- | ---------- | ------------ | -------------------------------- |
+| category   | Text       | True         | Nome da categoria                |
+| created_at | Timestampz | True         | Data e hora de quando foi criado |
+
+### Políticas do Supabase
+
+Essa é uma tabela simples que todos podem acessar seus dados mas somente usuários autenticados podem inserir
+novos dados.
+
+| Tipo   | Nome                                       | Template do Supabase? | Cargos alvos  |
+| ------ | ------------------------------------------ | --------------------- | ------------- |
+| Select | Enable read access for all users           | True                  | public        |
+| Insert | Enable insert for authenticated users only | True                  | authenticated |
